@@ -1,0 +1,16 @@
+Proiect PR IoT:
+
+Idee: Controlul unui purificator de aer de la distanta, obtinerea de date privind
+calitatea aerului in timp real.
+
+Resurse hardware necesare: purificator de aer cu Wi-Fi, placuta esp32 cu wi-fi, telefon mobil.
+
+Resurse software: python libs pentru analiza mesajelor primite de la purificator, cat si incarcarea in cloud a datelor.
+
+Gazduirea datelor se va face in cloud.
+
+Obiectiv si cerinte tehnice: Monitorizarea aerului din casa de la distanta, activarea/dezactivarea functiei
+de purificare; este necesar pentru acest lucru o platforma IoT configurata manual, astfel incat prin API-uri
+din reteaua locala se obtin date, interpretate de catre placuta si urcate dupa aceea in cloud; aceste date vor
+fi preluate de catre telefonul mobil pentru a afisa pe ecran valorile stocate. Tot cu ajutorul telefonului se 
+va putea controla aparatul.
