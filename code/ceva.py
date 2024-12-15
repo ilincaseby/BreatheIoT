@@ -77,12 +77,12 @@ client = mqtt.Client(client_id="pi")
 client.on_connect = on_connect
 client.on_message = on_message
 
-broker = "localhost"
+broker = "192.168.0.78"
 port = 1883
 
 client.connect(broker, port)
 
-client1 = mqtt.Client(client_id="pico")
+client1 = mqtt.Client(client_id="pico0")
 client1.on_connect = on_connect1
 client1.on_message = on_message1
 client1.on_disconnect = on_disconnect
