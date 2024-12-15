@@ -1,3 +1,3 @@
 #!/bin/bash
 
-miiocli airpurifiermiot --ip 192.168.1.4 --token 35786f1c1bc934a22ed8dd4b40464d37 set_child_lock off
+miiocli airpurifiermiot --ip 192.168.0.185 --token 031be4263e5c0445d0f85be64638f4ec set_child_lock off

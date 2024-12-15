@@ -106,11 +106,23 @@ class _DataPageState extends State<DataPage> {
     super.initState();
     fetchData();
     _timer = Timer.periodic(Duration(seconds: 3), (timer) {
-      fetchData();
+      if (mounted) {
+        // Verificăm dacă widget-ul este încă montat
+        fetchData();
+      } else {
+        _timer?.cancel(); // Oprim Timer-ul dacă widget-ul nu mai este montat
+      }
     });
   }
 
+  @override
+  void dispose() {
+    _timer?.cancel(); // Oprește Timer-ul pentru a preveni eroarea
+    super.dispose();
+  }
+
   Future<void> fetchData() async {
+    if (!mounted) return;
     const String url =
         "https://api.thingspeak.com/channels/2781680/feeds.json?api_key=MH3F3VO4BK16MLQK&results=1";
 
