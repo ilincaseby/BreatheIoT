@@ -1,4 +1,4 @@
-# BreatheIoT 🌬️
+<!-- # BreatheIoT 🌬️
 IoT project with the purpose of controlling Xiaomi Smart Air Purifier 4 from distance while collecting data from it and show it on a screen(mobile/pc/laptop)
 
 ## Dependencies 🧩
@@ -18,7 +18,7 @@ IoT project with the purpose of controlling Xiaomi Smart Air Purifier 4 from dis
     * Uploading the code for esp32 on a board you set up the middle part between local server(who run the scripts and share commands) and the cloud services(also these need modified with your specific accounts).
     * When you upload the app from flutter to a PC/Phone, you need to make sure that also cloud services' ip are changed, along with username and password.
     * Short scheme: <Air Purifier> <-> Local Server <-> ESP32 <-> Cloud <-> App
-    * Further details about implementation are present in *Documentation.pages*
+    * Further details about implementation are present in *Documentation.pages* -->
 
 # BreatheIoT 🌬️  
 An IoT project aimed at **remotely controlling** the **Xiaomi Smart Air Purifier 4** while collecting real-time data and displaying it on a screen (mobile/PC/laptop).
