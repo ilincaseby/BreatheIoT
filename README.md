@@ -84,12 +84,6 @@ The data flow can be summarized as:
 ## 🗺️ **Architecture Diagram**  
 Here is a simplified visual diagram of the BreatheIoT system flow:
 
-```plaintext
-+-------------------+       +-----------------+       +------------+       +------------+       +-----------+
-|  Air Purifier     |<----->|  Local Server   |<----->|  ESP32     |<----->|   Cloud    |<----->|   App     |
-| (Xiaomi Device)   |       |  (Docker, MQTT) |       | (Gateway)  |       | (AWS/Other)|       |(Flutter UI)|
-+-------------------+       +-----------------+       +------------+       +------------+       +-----------+
-
 ---
 
 ## 📄 **Short Summary**
