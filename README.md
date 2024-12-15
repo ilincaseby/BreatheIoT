@@ -81,11 +81,6 @@ The data flow can be summarized as:
 
 ---
 
-## 🗺️ **Architecture Diagram**  
-Here is a simplified visual diagram of the BreatheIoT system flow:
-
----
-
 ## 📄 **Short Summary**
 
 The **BreatheIoT** project allows you to remotely control a **Xiaomi Smart Air Purifier 4** while collecting real-time data and displaying it on a mobile or desktop app.  
