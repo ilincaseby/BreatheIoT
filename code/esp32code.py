@@ -14,7 +14,7 @@ import gc
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
 while not wifi.isconnected():
-    wifi.connect("TPLINKCDA", "0004Passw#")
+    wifi.connect("DIGI_87d087", "71810057")
 
 client = 0
 client_hivemq = 0
@@ -48,7 +48,7 @@ def mqqt_local_message(topic, msg):
 def mqqt_local_client():
     global client
     
-    client = MQTTClient("id_one", "192.168.0.78", 1883)
+    client = MQTTClient("id_one", "192.168.1.4", 1883)
     client.set_callback(mqqt_local_message)
 
     try:

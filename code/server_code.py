@@ -9,6 +9,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("ventsCommand")
 
 def on_message(client, userdata, msg):
+    print(f"buna, am primit o comanda{msg.payload.decode()}")
     result = subprocess.run(["./" + msg.payload.decode()], capture_output=True, text=True)
 
 def periodic_task(client):
@@ -26,7 +27,7 @@ def periodic_task(client):
                     if key_val[0] == 'Motor speed':
                         message_send += "Motor speed:" + key_val[1] + "\n"
                     elif key_val[0] == 'Purify volume':
-                        message_send += "Purify volume:" + key_val[1] + "\n"
+                        message_send += "Purify volume:" + key_val[1].split(" ")[1] + " metri cubi\n"
                     elif key_val[0] == 'Child lock':
                         message_send += "Child lock:" + key_val[1] + "\n"
         else:
@@ -34,9 +35,9 @@ def periodic_task(client):
                 if ':' in line:
                     key_val = line.split(":")
                     if key_val[0] == 'Temperature':
-                        message_send += "Temperature:" + key_val[1] + "\n"
+                        message_send += "Temperature:" + key_val[1].split(" ")[1] + " grade Celsius\n"
                     elif key_val[0] == 'AQI':
-                        message_send += "AQI:" + key_val[1] + "\n"
+                        message_send += "AQI:" + key_val[1].split(" ")[1] + " micrograme\n"
                     elif key_val[0] == 'Filter left time':
                         message_send += "Filter left time:" + key_val[1] + "\n"
                     elif key_val[0] == 'Humidity':
@@ -45,7 +46,7 @@ def periodic_task(client):
                         message_send += "Filter life remaining:" + key_val[1] + "\n"
         topic = "info"
         client.publish(topic, message_send)
-        
+        print(f'Am trimis asa: {message_send}')
         time.sleep(1)
 
 client = mqtt.Client(client_id="LocalServer")
